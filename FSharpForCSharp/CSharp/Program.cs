@@ -2,11 +2,12 @@
 
 namespace CSharp
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var account = new Account("1", DateTime.Now.ToUniversalTime());
+            Console.WriteLine($"Account id: {account.Id} {account.CreationTime}");
         }
     }
 }
